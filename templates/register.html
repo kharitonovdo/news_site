@@ -1,16 +1,24 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h1>Регистрация</h1>
+<font color="009900" size="4">
+    <h1>Регистрация</h1></font>
+<style>
+        body {
+        background: url(static/img/fon_registr.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        }
+</style>
 <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
+        <font color="f7f21a" size="4">
         {{ form.email.label }}<br>
         {{ form.email(class="form-control", type="email") }}<br>
         {% for error in form.email.errors %}
             <p class="alert alert-danger" role="alert">
                 {{ error }}
-            </p>
+            </font></p>
         {% endfor %}
     </p>
     <p>

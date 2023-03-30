@@ -4,7 +4,7 @@
 <h1>Добавление новости</h1>
 <form action="" method="post">
     {{ form.hidden_tag() }}
-    <p>
+    <font color="30d5c8" face="IMPACT"><p>
         {{ form.title.label }}<br>
         {{ form.title(class="form-control") }}<br>
         {% for error in form.title.errors %}
@@ -25,5 +25,6 @@
     <p>{{ form.is_private() }} {{ form.is_private.label }}</p>
     <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
     {{message}}
+    </font>
 </form>
 {% endblock %}
